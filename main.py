@@ -22,7 +22,7 @@ Bootstrap5(app)
 login_manager = LoginManager()
 login_manager.init_app(app)
 
-# CONNECT TO DB
+
 app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("DATABASE_URL")
 # "postgresql://blogpost_jjzr_user:xiYfcepuRLYDEYhUb9oFaE4nDCXVYFMj@dpg-cj5s4mpitvpc738amifg-a.singapore-postgres.render.com/blogpost_jjzr"
 # app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///posts.db"
