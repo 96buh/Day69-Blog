@@ -14,7 +14,7 @@ import os
 from forms import CreatePostForm, RegisterForm, LoginForm, CommentForm
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
+app.config['SECRET_KEY'] = "8BYkEfBA6O6donzWlSihBXox7C0sKR6b"
 ckeditor = CKEditor(app)
 Bootstrap5(app)
 
@@ -22,7 +22,7 @@ login_manager = LoginManager()
 login_manager.init_app(app)
 
 # CONNECT TO DB
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL", "sqlite:///post.db")
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL", "sqlite:///posts.db")
 # postgres://blogpost_jjzr_user:xiYfcepuRLYDEYhUb9oFaE4nDCXVYFMj@dpg-cj5s4mpitvpc738amifg-a.singapore-postgres.render.com/blogpost_jjzr
 
 db = SQLAlchemy()
